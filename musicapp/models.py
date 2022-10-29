@@ -24,7 +24,7 @@ class Song(models.Model):
     
 class Lyric(models.Model):
     id = models.AutoField(primary_key = True)
-    content = models.CharField(max_length = 18)
+    content = models.TextField()
     song = models.ForeignKey(Song, default = "", on_delete=models.CASCADE)
     
     
